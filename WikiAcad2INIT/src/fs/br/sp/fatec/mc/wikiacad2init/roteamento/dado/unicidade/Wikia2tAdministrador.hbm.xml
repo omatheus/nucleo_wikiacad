@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="fs.br.sp.fatec.mc.wikiacad2init.roteamento.dado.unicidade.Wikia2tAdministrador" table="wikia2t_administrador" catalog="wikiacad2bloco" optimistic-lock="version">
+        <id name="WIdunico" type="long">
+            <column name="w_idunico" />
+            <generator class="assigned" />
+        </id>
+        <property name="WNomecompleto" type="string">
+            <column name="w_nomecompleto" length="48" not-null="true" />
+        </property>
+        <property name="WDatanascimento" type="date">
+            <column name="w_datanascimento" length="10" not-null="true" />
+        </property>
+        <property name="WSexo" type="char">
+            <column name="w_sexo" length="1" not-null="true" />
+        </property>
+        <property name="WEmailcomunicao" type="string">
+            <column name="w_emailcomunicao" length="48" not-null="true" />
+        </property>
+        <property name="WPublicacoesavaliadas" type="java.lang.Integer">
+            <column name="w_publicacoesavaliadas" />
+        </property>
+        <property name="WPublicacoescorrigidas" type="string">
+            <column name="w_publicacoescorrigidas" length="16777215" />
+        </property>
+        <property name="WPublicacoesexcluidas" type="java.lang.Integer">
+            <column name="w_publicacoesexcluidas" />
+        </property>
+        <property name="WPublicacoesremovidas" type="string">
+            <column name="w_publicacoesremovidas" length="16777215" />
+        </property>
+        <property name="WContasexcluidas" type="string">
+            <column name="w_contasexcluidas" length="16777215" />
+        </property>
+        <property name="WChaveautadm" type="short">
+            <column name="w_chaveautadm" not-null="true" />
+        </property>
+        <property name="WDiretorioutil" type="string">
+            <column name="w_diretorioutil" length="88" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

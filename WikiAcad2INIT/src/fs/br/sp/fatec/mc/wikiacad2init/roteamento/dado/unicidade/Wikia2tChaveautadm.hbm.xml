@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="fs.br.sp.fatec.mc.wikiacad2init.roteamento.dado.unicidade.Wikia2tChaveautadm" table="wikia2t_chaveautadm" catalog="wikiacad2bloco" optimistic-lock="version">
+        <id name="WId" type="short">
+            <column name="w_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="WIdunicoadm" type="long">
+            <column name="w_idunicoadm" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

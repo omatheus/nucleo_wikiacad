@@ -1,0 +1,899 @@
+
+/*------------------------------ Body -----------------------*/
+
+body
+{
+    font-family: 'Source Sans Pro', sans-serif;
+
+    width: 100%;
+    max-width: 100%;
+
+    background-color: #f8f8f8;
+}
+
+p a
+{
+    text-decoration: underline;
+}
+
+strong
+{
+    font-weight: 600;
+}
+
+.full-page-element
+{
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+/*------------------------------ Buttons -----------------------*/
+
+
+
+.btn-link
+{
+    font-size: 18px;
+    font-weight: 400;
+
+    color: #2e2e2e;
+}
+
+.btn-link:hover
+{
+    text-decoration: none;
+
+    color: #2e2e2e;
+}
+
+.btn-link::after
+{
+    display: block;
+
+    width: 0;
+    height: 2px;
+
+    content: '';
+    transition: width .3s;
+    text-decoration: none;
+
+    background: #f57f17;
+}
+
+.btn-link:hover::after,
+.btn-link:focus::after,
+.active-link::after
+{
+    width: 100%;
+
+    text-decoration: none;
+
+
+}
+
+.btn-link:focus,
+.btn-link:hover,
+.active-link
+{
+    color: #f57f17 !important;
+    background-color: transparent;
+}
+
+/*------------------------------ End Button -----------------------*/
+
+/*------------------------------ Wrapper -----------------------*/
+
+.light-wrapper-top
+{
+    padding-top: 15px;
+}
+
+.medium-wrapper-top
+{
+    padding-top: 57px;
+}
+
+.hard-wrapper-top
+{
+    padding-top: 160px;
+}
+
+/*------------------------------ End Wrapper -----------------------*/
+
+/*------------------------------ Footer -----------------------*/
+
+.footer
+{
+    position: relative;
+
+    margin-top: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    background-color: #332c2f;
+}
+
+.footer .container
+{
+    padding: 30px 0 30px;
+}
+
+.footer ul
+{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 0;
+
+    list-style-type: none;
+
+    text-align: center;
+}
+
+.footer ul li
+{
+    line-height: 45px;
+
+    display: inline-block;
+
+    width: 45px !important;
+    height: 45px !important;
+    margin: 0 4px;
+
+    text-align: center;
+
+    color: #fb3;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+}
+
+.footer ul li:hover
+{
+    transition: background .3s;
+
+    background: rgba(0,0,0,.2);
+}
+
+.footer ul li a
+{
+    width: 42px !important;
+    height: 42px !important;
+
+    color: #fff;
+}
+
+.footer ul li a i
+{
+    line-height: 45px;
+
+    color: #fff;
+}
+
+.footer p
+{
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 24px;
+
+    margin-bottom: 0;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.footer a,
+.footer a:hover
+{
+    color: #fff;
+}
+
+/*------------------------------ End Footer -----------------------*/
+
+/*------------------------------ SideProfile -----------------------*/
+
+.profile-img
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    width: 85px;
+    height: 85px;
+
+    border-radius: 50%;
+}
+
+.profile-img img
+{
+    width: auto;
+    height: 100%;
+}
+
+.profile-description
+{
+    margin-top: -82px;
+    margin-left: 100px;
+}
+
+.dropdown-menu
+{
+    background-color: rgba(62, 69, 81, 1);
+}
+
+@media screen and (max-width: 992px)
+{
+    .profile-description
+    {
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+
+        text-align: center;
+    }
+
+    .profile-img
+    {
+        margin-bottom: 10px;
+    }
+
+    ul.nav
+    {
+        min-width: 160px;
+        max-width: 300px;
+        margin-top: 4px;
+        padding: 5px 0;
+
+        border: 1px solid #263238;
+        border-radius: .25rem;
+        background-color: rgba(62, 69, 81, 1) ;
+    }
+
+    ul.nav a.nav-link
+    {
+        padding-left: 10px;
+    }
+
+    ul.nav a.nav-link:hover
+    {
+        background-color: white;
+    }
+}
+
+.profile-description > h1
+{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.profile-description > h2
+{
+    font-size: 16px;
+    font-weight: 600;
+
+    margin-bottom: 0;
+}
+
+.profile-description > h3
+{
+    font-size: 16px;
+    font-weight: 400;
+
+    margin-top: .5rem;
+    margin-bottom: 0;
+}
+
+.profile-description p
+{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.list-group
+{
+    margin-top: 20px;
+}
+
+.list-group-item
+{
+    position: relative;
+}
+
+.list-group-title
+{
+    text-align: center;
+
+    border-top: 0 transparent;
+}
+
+.list-group-item-heading
+{
+    font-weight: 600;
+
+    margin-bottom: 0;
+}
+
+.accordion
+{
+    font-weight: 700;
+}
+
+.profile-list
+{
+    font-weight: 400;
+
+    border-top-left-radius: .0rem !important;
+    border-top-right-radius: .0rem !important;
+    border-bottom-right-radius: .0rem !important;
+    border-bottom-left-radius: .0rem !important;
+}
+
+.profile-list-accordion
+{
+    padding-left: 35px;
+
+    background-color: #f9f9f9;
+}
+
+/*------------------------------ End SideProfile -----------------------*/
+
+/*------------------------------ Post -----------------------*/
+
+.post-subtitle
+{
+    font-size: 25px;
+    font-weight: 400;
+
+    text-align: left;
+
+    color: #757575;
+}
+
+.post-date-hour
+{
+    font-size: 16px;
+    font-weight: 300;
+
+    margin-bottom: 0;
+
+    color: #263238;
+}
+
+.post-content
+{
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 190%;
+}
+
+.post-preview .post-content p
+{
+    margin-bottom: 0;
+}
+
+.post-subcontent
+{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 200%;
+
+    padding-top: 10px;
+}
+
+.post-second-subcontent
+{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/*------------------------------ End Post -----------------------*/
+
+/*------------------------------ NavBar -----------------------*/
+
+ul.nav li.nav-item
+{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+ul.nav li.nav-item a
+{
+    color: white !important;
+}
+
+ul.nav li.nav-item a:hover
+{
+    transition: color .3s;
+
+    color: rgba(255, 152, 0, 1) !important;
+}
+
+ul.nav li.nav-item:first-child
+{
+    padding-left: 2rem;
+}
+
+.navbar
+{
+    z-index: 13;
+
+    margin-top: 13px;
+
+    border-top: 1px solid rgba(245, 245, 245, .15);
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.responsive
+{
+    display: none;
+}
+
+.navbar-toggler
+{
+    color: white;
+}
+
+
+@media screen and (max-width: 992px)
+{
+    .navbar-brand,
+    .form-inline
+    {
+        display: none;
+    }
+
+    .responsive
+    {
+        display: block;
+    }
+
+    .post-subcontent
+    {
+        line-height: 100% !important;
+
+        margin-bottom: 1rem;
+    }
+
+    ul.nav li.nav-item
+    {
+        padding-left: 0 !important;
+    }
+
+    .jumbotron
+    {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+/*------------------------------ End NavBar -----------------------*/
+
+/*------------------------------ PostList -----------------------*/
+
+.post-preview > a
+{
+    color: #263238;
+}
+
+.post-preview > a:hover,
+.post-preview > a:focus
+{
+    transition: color .3s;
+    text-decoration: none;
+
+    color: rgba(255, 152, 0, .9);
+}
+
+.post-preview > a > .post-preview-title
+{
+    font-size: 27px;
+    font-weight: 900;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.post-preview > a > .post-preview-subtitle
+{
+    font-size: 25px;
+    font-weight: 400;
+
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.post-preview > .post-preview-meta
+{
+    font-size: 18px;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: #4b515d;
+}
+
+.post-preview > .post-preview-meta > a
+{
+    font-weight: 600;
+
+    color: #0d47a1;
+}
+
+.post-preview > .post-preview-meta > a:hover,
+.post-preview > .post-preview-meta > a:focus
+{
+    transition: color .3s;
+    text-decoration: underline;
+
+    color: #f57f17;
+}
+
+.post-button
+{
+    margin: 0 auto !important;
+}
+
+.post-button .btn-link
+{
+    font-weight: 600;
+
+    padding-left: 0rem;
+
+    color: #0d47a1;
+}
+
+.post-button .btn-link:hover
+{
+    color: #f57f17;
+}
+
+.card
+{
+    margin-top: 20px;
+}
+
+.tag.tag-pill:hover
+{
+    transition: background .3s;
+
+    background: #212121;
+}
+
+.tag.tag-pill
+{
+    font-size: 13px;
+    font-weight: 400;
+
+    color: white;
+}
+
+#tag-options
+{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#tag-options a span
+{
+    margin-top: .4rem;
+    margin-left: 0;
+    padding: .5rem;
+
+    border-radius: 50%;
+    background: #ffbb33 ;
+}
+
+#tag-options a span:hover
+{
+    transition: background .3s;
+    background: #FF8800;
+}
+
+/*------------------------------ End PostList -----------------------*/
+
+
+/*------------------------------ profile page -----------------------*/
+
+.profile-img.profile-page
+{
+    width: 170px;
+    height: 170px;
+    margin: -40px auto 20px;
+}
+
+.short-description
+{
+    margin-bottom: -40px;
+
+    text-align: center;
+}
+
+.short-description h1
+{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.short-description h2
+{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.short-description h3
+{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.short-description h4
+{
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.profile-buttons
+{
+    margin: -10px -20px 0 -20px;
+
+    text-align: center;
+}
+
+.profile-buttons a
+{
+    font-size: 18px;
+    font-weight: 400;
+
+    padding: 0 10px 10px 10px;
+
+    text-align: center;
+
+    color: #0d47a1;
+}
+
+.profile-buttons a:hover {
+    color: #f57f17;
+}
+
+.post
+{
+    font-size: 22px;
+
+    margin: 25px 0 0 0;
+}
+
+.post a
+{
+    text-decoration: underline;
+
+    color: #0d47a1;
+}
+
+.post > .post-title
+{
+    font-size: 35px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+    text-align: left;
+}
+
+.post > .post-title.profile
+{
+    text-align: center;
+}
+
+.post > .post-title.about
+{
+    font-size: 45px;
+}
+
+.post > .posted-by
+{
+    font-weight: 300;
+    font-style: italic;
+
+    text-align: right;
+}
+
+
+/*------------------------------ end profile page -----------------------*/
+
+/*------------------------------ register page -----------------------*/
+
+.card.card-block
+{
+    border-bottom: 2px solid rgba(0, 0, 0, .125);
+}
+
+.card-header
+{
+    font-weight: 600;
+}
+
+.card-title
+{
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.profile-edit
+{
+    margin: 0 auto 20px;
+}
+
+
+/*------------------------------ end register page -----------------------*/
+
+body .background
+{
+    background-image: url(../imgs/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#login
+{
+    padding: 8% 0 0;
+}
+
+#login .btn-link
+{
+    padding-right: 0;
+
+    color: #0d47a1;
+}
+
+#login .btn-link:hover
+{
+    color: #2e2e2e;
+}
+
+#login .form-group
+{
+    margin-bottom: 7px;
+}
+
+#login .card-header
+{
+    margin-bottom: 0;
+}
+
+#login .card-footer .btn-link
+{
+    font-weight: 400 !important;
+
+    padding: 0;
+}
+
+.overlay
+{
+    position: absolute;
+    z-index: 12;
+
+    width: 100%;
+    height: 210px;
+
+    background-color: rgba(0, 0, 0, .5);
+}
+
+header
+{
+    width: 100%;
+    height: 210px;
+}
+
+header img.background
+{
+    position: absolute;
+    z-index: 11;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: inherit;
+}
+
+header img.logo
+{
+    position: relative;
+    z-index: 13;
+    left: 50%;
+
+    max-width: 220px;
+    height: 120px;
+    margin-top: 20px;
+    margin-left: -110px;
+}
+
+.page-title
+{
+    z-index: 12;
+
+    width: 100%;
+
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.page-title.fixed-title
+{
+    position: fixed;
+    top: 0;
+
+    background-color: #f8f8f8;
+}
+
+.page-title > h1
+{
+    margin: 5px auto;
+
+    text-align: center;
+}
+
+@media screen and (max-width: 992px){
+    #page-title {
+        display: none;
+    }
+    .page-title > h1 > a > i {
+        margin-left: 0 !important;
+    }
+
+}
+
+.page-title > h1 > a
+{
+    font-size: 45px;
+    font-weight: 700;
+    cursor: pointer;
+
+    color: #2e2e2e;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility .0s, opacity .3s;
+}
+
+.page-title > h1 > a.undisplayed {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s, opacity .3s;
+}
+
+.page-title > h1 > a:hover,
+.page-title > h1 > a:focus
+{
+    transition: color .3s;
+    text-decoration: none;
+
+    color: rgba(255, 152, 0, .9);
+}
+
+.page-title > h1 > a > i {
+    margin-left: 45px;
+    font-size: 40px;
+}
+
+.page-title > form {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s, opacity .3s;
+}
+
+.page-title > form.displayed {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility .0s, opacity .3s;
+}
+
+.page-title > form > input {
+    position: absolute;
+    top: 0;
+    width: 350px !important;
+    height: 50px;
+    margin-top: 5px;
+    margin-left: -175px;
+    left: 50%;
+}
