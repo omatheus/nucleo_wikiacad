@@ -1,0 +1,83 @@
+/*
+
+import fs.br.sp.fatec.mc.wikiacad2init.seguranca.shadow.metodos.WA2Margem;
+import fs.br.sp.fatec.mc.wikiacad2init.seguranca.shadow.metodos.WA2MargemAutenticado;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+
+
+*/
+
+  /*
+            
+
+final
+                  String chave = "6FCF9439";
+
+            WA2Margem.WA2DES_Criptografar_Runtime wa3 =
+                  new WA2Margem().new WA2DES_Criptografar_Runtime();
+            WA2Margem.WA2DES_Descriptografar_Runtime wa4 =
+                  new WA2Margem().new WA2DES_Descriptografar_Runtime();
+
+            String recebe = wa3.executarC(chave, "reto**publ**sele", WA2MargemAutenticado.H_EXEC2);
+
+            wa3.desalocar();
+
+            String recebe_ = wa4.executarD(chave, recebe, WA2MargemAutenticado.H_EXEC2);
+
+            System.out.println(recebe);
+            System.out.println(recebe_);
+
+
+            wa4.desalocar();
+
+
+
+            final
+                  String chave = "6FCF9439";
+
+            try
+                  {
+
+                  WA2Margem.WA2DES_Criptografar wa2 = new WA2Margem().new WA2DES_Criptografar(chave, new FileInputStream(
+                        "/tmp/r4.ct"), new FileOutputStream("/tmp/r45.ct"), WA2MargemAutenticado.H_EXEC1,
+                        WA2MargemAutenticado.H_EXEC2);
+
+
+                  WA2Margem.WA2DES_Descriptografar wa3 = new WA2Margem().new WA2DES_Descriptografar(chave, new FileInputStream(
+                        "/tmp/r45.ct"), new FileOutputStream("/tmp/r455.ct"), WA2MargemAutenticado.H_EXEC1,
+                        WA2MargemAutenticado.H_EXEC2);
+
+
+                  }
+            catch (Exception ex)
+                  {
+                  ex.printStackTrace();
+                  }
+*/
+            //new WA2NetAgent();
+
+
+            //WA2Motor wa = new WA2Motor("from Wikia2tSelecionadas", WA2MotorOpcoes.DIRETIVA_SIMPLES);
+/*
+             * Wikia2tContribuinte ctr = new WA2MotorImagem<Wikia2tContribuinte>().getEntidade(
+             * "from Wikia2tContribuinte where w_nomecompleto like 'Mateus%'");
+             *
+             * System.out.printf("%s\n", ctr.getWNomecompleto());
+             *
+             * HashMap<Long, Wikia2tContribuinte> atr = new WA2MotorImagem<Wikia2tContribuinte>().getEntidades(
+             * "from Wikia2tContribuinte");
+             *
+             * for (
+             *
+             * Wikia2tContribuinte obj : atr.values()
+             *
+             * )
+             * {
+             *
+             * Wikia2tContribuinte tmp = obj;
+             *
+             * System.out.println(obj.getWNomecompleto());
+             * }
+             */

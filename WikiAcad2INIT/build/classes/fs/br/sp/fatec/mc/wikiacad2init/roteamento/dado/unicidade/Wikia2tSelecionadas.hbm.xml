@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="fs.br.sp.fatec.mc.wikiacad2init.roteamento.dado.unicidade.Wikia2tSelecionadas" table="wikia2t_selecionadas" catalog="wikiacad2bloco" optimistic-lock="version">
+        <id name="WId" type="short">
+            <column name="w_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="WIdeditorialresponsavel" type="long">
+            <column name="w_ideditorialresponsavel" not-null="true" />
+        </property>
+        <property name="WIdplubicacao" type="long">
+            <column name="w_idplubicacao" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

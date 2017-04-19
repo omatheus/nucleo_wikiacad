@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="fs.br.sp.fatec.mc.wikiacad2init.roteamento.dado.unicidade.Wikia2tPublicacao" table="wikia2t_publicacao" catalog="wikiacad2bloco" optimistic-lock="version">
+        <id name="WIdunico" type="long">
+            <column name="w_idunico" />
+            <generator class="assigned" />
+        </id>
+        <property name="WIdautor" type="long">
+            <column name="w_idautor" not-null="true" />
+        </property>
+        <property name="WCategoria" type="string">
+            <column name="w_categoria" length="32" />
+        </property>
+        <property name="WDatapublicacao" type="date">
+            <column name="w_datapublicacao" length="10" not-null="true" />
+        </property>
+        <property name="WTitulo" type="string">
+            <column name="w_titulo" length="48" not-null="true" />
+        </property>
+        <property name="WConteudo" type="string">
+            <column name="w_conteudo" not-null="true" />
+        </property>
+        <property name="WConteudomodifcontribuintes" type="string">
+            <column name="w_conteudomodifcontribuintes" />
+        </property>
+        <property name="WConteudomodifeditoriais" type="string">
+            <column name="w_conteudomodifeditoriais" />
+        </property>
+        <property name="WCorrecao" type="string">
+            <column name="w_correcao" />
+        </property>
+        <property name="WComentarios" type="string">
+            <column name="w_comentarios" length="16777215" />
+        </property>
+        <property name="WCurtidas" type="java.lang.Integer">
+            <column name="w_curtidas" />
+        </property>
+        <property name="WExibicao" type="char">
+            <column name="w_exibicao" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

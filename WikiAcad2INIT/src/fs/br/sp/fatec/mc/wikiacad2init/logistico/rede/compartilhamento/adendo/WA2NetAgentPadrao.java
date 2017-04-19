@@ -15,6 +15,14 @@ public abstract
             int PORTA = 20020;
 
 
+      public static final
+            long FNANO()
+            {
+            return System.nanoTime();
+            }
+
+
+
       }
 
 

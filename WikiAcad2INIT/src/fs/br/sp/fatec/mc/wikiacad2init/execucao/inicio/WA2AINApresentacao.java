@@ -22,7 +22,7 @@ public final
 
 
       private final
-            long SV = 100420;
+            long SV = 100425;
 
 
       public
@@ -30,8 +30,8 @@ public final
 
             {
 
-            informe().println(HEAD + "\n" + String.valueOf(SV));
-            
+            informe().println(HEAD + "\n" + String.valueOf(SV) + "\n");
+
             }
 
 

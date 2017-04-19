@@ -17,58 +17,59 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet(name = "WA2ReqConSelecionado", urlPatterns =
-      {
-      "/WA2ReqConSelecionado"
-      })
+    {
+    "/WA2ReqConSelecionado"
+    })
 public
       class WA2ReqConSelecionado extends HttpServlet
-      {
+    {
 
 
 
 
-      private static final
-            WA2WSXagent agent = new WA2WSXagent();
+    private static final
+          WA2WSXagent agent = new WA2WSXagent();
 
 
-      protected
-            void WA2ReqConSelecionado(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-            {
+    protected
+          void WA2ReqConSelecionado(HttpServletRequest request,
+                                    HttpServletResponse response)
+          throws ServletException, IOException
+        {
+
+        response.setContentType("text/html;charset=UTF-8");
+
+        final
+              StringBuffer indagacao = new StringBuffer();
+
+        agent.requisicaoLocal(WA2WSXagentPadroes.OPERACAO_SELECIONAR_PUBLICACOES,
+              indagacao);
+
+        response.getWriter().print(indagacao.toString() + "<br>");
+
+        }
 
 
-            final
-                  StringBuffer indagacao = new StringBuffer();
-
-            final
-                  boolean resultado = agent.requisicaoLocal(WA2WSXagentPadroes.OPERACAO_SELECIONAR_PUBLICACOES, indagacao);
-
-            response.getWriter().print("Saida=" + resultado+"<br>");
-            response.getWriter().print("Resultado=" + indagacao.toString()+"<br>");
-
-            }
-
-
-      @Override
-      protected
-            void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-            {
-            WA2ReqConSelecionado(request, response);
-            }
+    @Override
+    protected
+          void doGet(HttpServletRequest request, HttpServletResponse response)
+          throws ServletException, IOException
+        {
+        WA2ReqConSelecionado(request, response);
+        }
 
 
 
 
-      @Override
-      public
-            String getServletInfo()
-            {
-            return "DESCRICAO";
-            }
+    @Override
+    public
+          String getServletInfo()
+        {
+        return "DESCRICAO";
+        }
 
 
-      }
+    }
 
 
 
