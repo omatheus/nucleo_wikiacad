@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "WA2ReqConSelecionado", urlPatterns =
     {
-    "/WA2ReqConSelecionado"
+    "/wa2reqconselecionado"
     })
 public
       class WA2ReqConSelecionado extends HttpServlet
@@ -37,6 +37,7 @@ public
           throws ServletException, IOException
         {
 
+        
         response.setContentType("text/html;charset=UTF-8");
 
         final
@@ -45,7 +46,13 @@ public
         agent.requisicaoLocal(WA2WSXagentPadroes.OPERACAO_SELECIONAR_PUBLICACOES,
               indagacao);
 
-        response.getWriter().print(indagacao.toString() + "<br>");
+        
+        request.setAttribute("wa2revista", indagacao.toString());
+        request.getRequestDispatcher("bemvindo.jsp").forward(request, response);
+        
+        
+        //response.getWriter().print(indagacao.toString() + "<br>");
+
 
         }
 

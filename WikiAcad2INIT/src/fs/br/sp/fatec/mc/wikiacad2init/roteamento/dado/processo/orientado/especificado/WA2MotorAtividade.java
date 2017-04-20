@@ -19,6 +19,10 @@ public abstract
           String CONTRIB_NOMINAL_POR_ID = "select WC.WNomecompleto from Wikia2tContribuinte WC where WC.WIdunico = ";
 
 
+    public static final
+          String CONTRIB_CASA_POR_ID = "select WC.WDiretorioutil from Wikia2tContribuinte WC where WC.WIdunico = ";
+
+
     }
 
 

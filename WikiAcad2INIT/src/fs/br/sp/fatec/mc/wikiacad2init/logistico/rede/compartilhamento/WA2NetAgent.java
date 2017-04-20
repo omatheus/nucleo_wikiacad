@@ -57,7 +57,7 @@ public final
 
 
     private static
-          String _tunel;
+          String _tunel[];
 
 
     private static
@@ -161,7 +161,7 @@ public final
 
                                 WA2NetAgent.informeAlocado().println(
                                       "=>Respondendo! proc:reto**publ**sele");
-                                WA2NetAgent._tunel = new String();
+                                WA2NetAgent._tunel = new String[2];
 
 
                                 WA2NetAgent.waimg = new WA2MotorImagem<Wikia2tPublicacao>();
@@ -184,12 +184,15 @@ public final
                                           iterando.getWDatapublicacao().toString());
 
 
-                                    WA2NetAgent._tunel += WA2NetAgentMascara.formatacaoMinima(
-                                          iterando.getWTitulo(), "<br>", "<br>");
+
+
+                                    WA2NetAgent._tunel[0] += WA2NetAgentMascara.formatacaoMinima(
+                                          iterando.getWTitulo(), "</h2>",
+                                          " <h2 class=\"post-preview-title\">");
 
 
                                     final
-                                          String id_autor =
+                                          String id_p_autor =
                                           new WA2Motor(
                                                 WA2MotorAtividade.CONTRIB_NOMINAL_POR_ID
                                                 + String.valueOf(
@@ -198,27 +201,51 @@ public final
                                           getDiretivaRetornoBruto();
 
 
-                                    WA2NetAgent._tunel += WA2NetAgentMascara.formatacaoMinima(
-                                          id_autor.replaceAll(new String(
-                                                
+                                    final
+                                          String casa_p_autor =
+                                          new WA2Motor(
+                                                WA2MotorAtividade.CONTRIB_CASA_POR_ID
+                                                + String.valueOf(
+                                                      iterando.getWIdautor()),
+                                                WA2MotorOpcoes.DIRETIVA_RETORNO_BRUTO).
+                                          getDiretivaRetornoBruto();
+
+
+                                    WA2NetAgent._tunel[0] += WA2NetAgentMascara.formatacaoMinima(
+                                          id_p_autor.replaceAll(new String(
                                                 WA2Motor._separador_local),
-                                                
                                                 ""),
-                                          "<br>", "<br>");
+                                          "</a></p>",
+                                          "<p class=\"post-preview-meta\">"
+                                          + "Por <a href=\"" + casa_p_autor.replaceAll(
+                                                new String(
+                                                      WA2Motor._separador_local),
+                                                "")
+                                          + "\">");
 
 
-                                    WA2NetAgent._tunel += WA2NetAgentMascara.formatacaoMinima(
-                                          iterando.getWConteudo(), "<br>",
-                                          "<br>");
+                                    WA2NetAgent._tunel[0] += WA2NetAgentMascara.formatacaoMinima(
+                                          iterando.getWConteudo(), "</div>",
+                                          "<div class=\"post-content\">");
 
-                                    WA2NetAgent._tunel += "<br><br>";
+
+                                    WA2NetAgent._tunel[1] +=
+                                          WA2NetAgentMascara.corpoApresentacaoSelecionadas(
+                                                WA2NetAgent._tunel[0]
+                                          );
+                                    WA2NetAgent._tunel[0] = "";
 
 
                                     }
-                                WA2NetAgent._tunel += WA2NetAgent.FIM_LINHA;
+                                WA2NetAgent._tunel[1] += WA2NetAgent.FIM_LINHA;
+
 
                                 Thread.sleep(256);
-                                WA2NetAgent.saida.write(WA2NetAgent._tunel);
+                                WA2NetAgent.saida.write(
+                                      WA2NetAgent._tunel[1]);
+                                WA2NetAgent._tunel[1] = "";
+
+
                                 WA2NetAgent.saida.flush();
 
                                 }
@@ -241,7 +268,8 @@ public final
 
 
                         WA2NetAgent._receptor = "";
-                        WA2NetAgent._tunel = "";
+                        WA2NetAgent._tunel = null;
+
 
                         WA2NetAgent.socketexterno.close();
 

@@ -14,40 +14,42 @@ import java.util.Date;
 
 public abstract
       class WA2Report
-      {
+    {
 
 
 
 
-      public static final
-            void armazenarLOG(final
-                  String origem, final
-                              String cadeia)
+    public static final
+          void armazenarLOG(final
+                String origem, final
+                            String cadeia)
+        {
+
+        try
             {
 
-            try
-                  {
+            final
+                  File arquivologfinal = new File(
+                        "/var/log/was/" + origem + new Date().toInstant().toString() + ".txt");
 
-                  final
-                        File arquivologfinal = new File("/var/log/was/" + origem + new Date().toInstant().toString() + ".txt");
+            final
+                  FileWriter fw = new FileWriter(arquivologfinal);
 
-                  final
-                        FileWriter fw = new FileWriter(arquivologfinal);
+            BufferedWriter bw = new BufferedWriter(fw);
 
-                  BufferedWriter bw = new BufferedWriter(fw);
-
-                  bw.write(cadeia);
-                  bw.close();
-
-                  }
-            catch (Exception ex)
-                  {
-                  }
+            bw.write(cadeia);
+            bw.close();
 
             }
+        catch (Exception ex)
+            {
+            ex.printStackTrace();
+            }
+
+        }
 
 
-      }
+    }
 
 
 
