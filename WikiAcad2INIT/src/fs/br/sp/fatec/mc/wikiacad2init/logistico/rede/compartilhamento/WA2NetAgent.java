@@ -215,7 +215,7 @@ public final
                                           id_p_autor.replaceAll(new String(
                                                 WA2Motor._separador_local),
                                                 ""),
-                                          "</a></p>",
+                                          "</a>" + " em " + iterando.getWDatapublicacao().toString() + "</p>",
                                           "<p class=\"post-preview-meta\">"
                                           + "Por <a href=\"" + casa_p_autor.replaceAll(
                                                 new String(
@@ -227,6 +227,17 @@ public final
                                     WA2NetAgent._tunel[0] += WA2NetAgentMascara.formatacaoMinima(
                                           iterando.getWConteudo(), "</div>",
                                           "<div class=\"post-content\">");
+
+
+                                    WA2NetAgent._tunel[0] += WA2NetAgentMascara.formatacaoMinima(
+                                          String.valueOf(iterando.getWCurtidas()),
+                                          "</div>",
+                                          "<div id=\"tag-options\">"
+                                          + "                                <a href=\"#\"><span class=\"tag tag-pill tag-default\">"
+                                          + "                                        <i class=\"fa fa-thumbs-up\"></i>"
+                                          + "                                    </span></a>");
+
+
 
 
                                     WA2NetAgent._tunel[1] +=
